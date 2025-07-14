@@ -23,5 +23,12 @@ class BinaryTree:
         if not value:
             return None
         self.root = value
-
-    # TODO fazer os métodos da árvore binária
+        
+class Sala:
+    """
+    Representa uma sala na árvore do jogo, contendo um nível e ponteiros para salas à esquerda e direita.
+    """
+    def __init__(self, nivel):
+        self.nivel = nivel
+        self.left = None
+        self.right = None

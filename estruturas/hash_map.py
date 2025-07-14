@@ -42,3 +42,30 @@ class HashMap:
     def keys(self):
         """Retorna as chaves do dicionário"""
         self.items.keys()
+        
+inimigos_por_nivel = {
+    1: {
+        "nome": "Goble",
+        "HP": 30,
+        "fraqueza": "Espada",
+        "ataque_tipo": "Espada"
+    },
+    2: {
+        "nome": "Troll",
+        "HP": 50,
+        "fraqueza": "Mágico",
+        "ataque_tipo": "Espada"
+    },
+    3: {
+        "nome": "Lich",
+        "HP": 70,
+        "fraqueza": "Distância",
+        "ataque_tipo": "Mágico"
+    },
+    4: {
+        "nome": "Dragão",
+        "HP": 100,
+        "fraqueza": "Distância",
+        "ataque_tipo": "Fogo"
+    }
+}
