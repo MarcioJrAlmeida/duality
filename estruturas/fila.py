@@ -2,12 +2,9 @@ class Queue:
     """Implementação de uma fila com seus comportamentos.
     Ideal para ser herdada por tipos que queiram ser comportar como filas"""
 
-    def __init__(self, value):
-        """Inicia a lista com [] caso não haja um argumento. Caso contrário já
-        inicializar um array"""
-        if not value:
-            self.data = [value]
-        self.data = []
+    def __init__(self, value=None):
+        """Inicia a lista com [] caso não haja um argumento. Caso contrário já inicializa com o valor fornecido"""
+        self.data = [value] if value is not None else []
 
     def __str__(self):
         """Nos permiete imprimir a fila"""
