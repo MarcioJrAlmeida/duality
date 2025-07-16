@@ -1,3 +1,13 @@
+"""
+Módulo que implementa as funções de combate entre o herói e os inimigos.
+
+Funções:
+    aplicar_defesa: Aplica lógica de mitigação de dano conforme defesa escolhida.
+    verificar_aparicao_inimigo: Sorteia chance de aparição do inimigo.
+    iniciar_combate: Executa o combate baseado em turnos.
+    tentar_fuga: Avalia se o herói consegue escapar da batalha.
+"""
+
 from estruturas.fila import Fila
 from game.persona import Heroi, Inimigo
 from utils.acao import rolar_dado, escolher_acao, escolher_tipo_ataque, escolher_defesa

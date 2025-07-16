@@ -1,8 +1,23 @@
+"""
+Módulo que define as classes de personagens do jogo: Herói e Inimigo.
+"""
+
 from estruturas.dicionario import Dicionario
 
 
 class Persona:
-    """Classe base para personagens do jogo."""
+    """
+    Classe base para personagens.
+
+    Attributes:
+        nome (str): Nome do personagem.
+        hp (int): Pontos de vida.
+        ataque (dict): Tipos de ataque e seus valores.
+        defesa (dict): Tipos de defesa e seus valores.
+
+    Methods:
+        receber_dano(dano): Aplica dano e retorna se ainda está vivo.
+    """
 
     def __init__(self, nome: str, hp: int, ataque: dict, defesa: dict):
         self.nome = nome
@@ -20,7 +35,12 @@ class Persona:
 
 
 class Heroi(Persona):
-    """Classe do herói do jogo."""
+    """
+    Classe que representa o herói jogável.
+
+    Methods:
+        restaurar_vida(): Restaura HP total do herói.
+    """
 
     def __init__(self):
         super().__init__(
@@ -37,7 +57,13 @@ class Heroi(Persona):
 
 
 class Inimigo(Persona):
-    """Classe base para inimigos do jogo."""
+    """
+    Classe para representar inimigos do jogo.
+
+    Attributes:
+        tipo_atk (str): Tipo de ataque principal do inimigo.
+        fraqueza (str): Tipo de ataque ao qual é vulnerável.
+    """
 
     def __init__(self, nome: str, hp: int, tipo_atk: str, fraqueza: str):
         super().__init__(

@@ -1,5 +1,15 @@
+"""
+módulo dicionario.py
+
+Módulo que implementa um wrapper para dicionários com métodos utilitários.
+"""
 class Dicionario:
-    """Implementação para dicionário"""
+    """
+    Classe de dicionário personalizada para ataques e defesas.
+
+    Methods:
+        get(tipo: str): Retorna o valor associado ao tipo.
+    """
 
     def __init__(self, dados=None):
         self.dados = dados if dados is not None else {}
