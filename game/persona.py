@@ -33,6 +33,7 @@ class Heroi(Persona):
     def restaurar_vida(self) -> None:
         """Restaura toda a vida do herói."""
         self.hp = 100
+        print("[HP RESTAURADO] +100 pontos de vida 🧥")
 
 
 class Inimigo(Persona):
