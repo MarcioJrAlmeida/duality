@@ -1,31 +1,22 @@
-class Queue:
-    """Implementação de uma fila com seus comportamentos.
-    Ideal para ser herdada por tipos que queiram ser comportar como filas"""
+class Fila:
+    """Implementação de fila para o histórico de eventos."""
 
-    def __init__(self, value=None):
-        """Inicia a lista com [] caso não haja um argumento. Caso contrário já inicializa com o valor fornecido"""
-        self.data = [value] if value is not None else []
+    def __init__(self):
+        self.itens = []
+
+    def enfileirar(self, item):
+        """Adiciona um item ao final da fila."""
+        self.itens.append(item)
+
+    def desenfileirar(self):
+        """Remove e retorna o item do início da fila."""
+        if not self.vazia():
+            return self.itens.pop(0)
+        return None
+
+    def vazia(self):
+        """Verifica se a fila está vazia."""
+        return len(self.itens) == 0
 
     def __str__(self):
-        """Nos permiete imprimir a fila"""
-        return str(self.data)
-
-    def enqueue(self, value):
-        """Enfileira um novo valor"""
-        if not value:
-            return
-        self.data.append(value)
-
-    def dequeue(self):
-        """Retira o primeiro valor da fila. Retorna None se a fila
-        estiver vazia"""
-        if not self.data:
-            return None
-        return self.data.pop(0)
-
-    def peek(self):
-        """Retorna o primeiro valor da fila. Retorna None se a fila
-        estiver vazia"""
-        if not self.data:
-            return None
-        return self.data[0]
+        return "\n".join(self.itens)
