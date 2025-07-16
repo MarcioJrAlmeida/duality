@@ -1,3 +1,13 @@
+"""
+Módulo que define ações que o jogador pode tomar em combate.
+
+Funções:
+    escolher_acao(): Solicita ao jogador a ação desejada (atacar ou defender).
+    escolher_tipo_ataque(): Retorna o tipo de ataque escolhido.
+    escolher_defesa(): Retorna o tipo de defesa escolhido.
+    rolar_dado(): Simula um dado D20.
+"""
+
 import random
 
 def escolher_acao():

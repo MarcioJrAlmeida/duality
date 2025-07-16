@@ -1,2 +1,11 @@
 # Ignorar o PyCache
-**/__pycache__/
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos .txt
+/documentacao_txt
+*.txt
+*.doccx
+
+# Ignorar o arquivo que gera as documentações via PyDoc
+gerar_docs.py

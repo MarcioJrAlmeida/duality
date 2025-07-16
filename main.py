@@ -1,3 +1,10 @@
+"""
+Arquivo principal do jogo Duality - RPG de Batalha.
+
+Este módulo inicializa o jogo, constrói a árvore de decisões,
+e gerencia o loop principal de navegação pelas salas.
+"""
+
 from estruturas.arvore import ArvoreBinaria
 from estruturas.fila import Fila
 

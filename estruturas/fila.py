@@ -1,5 +1,21 @@
+"""
+módulo fila.py
+
+Este módulo contém funções relacionadas a criação e implementação da Fila, no qual vamos guardar todos os históricos de movimentação.
+"""
+
 class Fila:
-    """Implementação de fila para o histórico de eventos."""
+    """
+    Fila básica para armazenar eventos do jogo.
+
+    Attributes:
+        data (list): Lista de elementos na fila.
+    
+    Methods:
+        enqueue(item): Adiciona item à fila.
+        dequeue(): Remove e retorna o primeiro item da fila.
+        is_empty(): Verifica se a fila está vazia.
+    """
 
     def __init__(self):
         self.itens = []

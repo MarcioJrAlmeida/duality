@@ -1,5 +1,17 @@
+"""
+módulo arvore.py
+
+Este módulo contém funções relacionadas a criação e implementação da Árvore Binária.
+"""
 class ArvoreBinaria:
-    """Implementação de árvore binária para representar os caminhos da aventura."""
+    """
+    Classe que representa uma árvore binária onde cada nó pode conter um inimigo.
+
+    Attributes:
+        inimigo (Inimigo): Inimigo presente na sala.
+        esquerda (ArvoreBinaria): Caminho à esquerda.
+        direita (ArvoreBinaria): Caminho à direita.
+    """
 
     def __init__(self, valor=None):
         self.valor = valor  # Nó atual pode conter um inimigo ou ser None
